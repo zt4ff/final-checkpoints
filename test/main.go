@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.CountChar("Hello World", 'l'))
-	fmt.Println(piscine.CountChar("5  balloons", 5))
-	fmt.Println(piscine.CountChar("   ", ' '))
-	fmt.Println(piscine.CountChar("The 7 deadly sins", '7'))
+	fmt.Print(piscine.PrintIf("abcdefz"))
+	fmt.Print(piscine.PrintIf("abc"))
+	fmt.Print(piscine.PrintIf(""))
+	fmt.Print(piscine.PrintIf("14"))
 }
