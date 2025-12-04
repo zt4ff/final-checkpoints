@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Print(piscine.PrintIf("abcdefz"))
-	fmt.Print(piscine.PrintIf("abc"))
-	fmt.Print(piscine.PrintIf(""))
-	fmt.Print(piscine.PrintIf("14"))
+	fmt.Println(piscine.FishAndChips(4))
+	fmt.Println(piscine.FishAndChips(9))
+	fmt.Println(piscine.FishAndChips(6))
+
 }
