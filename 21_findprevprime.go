@@ -1,13 +1,5 @@
 package piscine
 
-func atoi(s string) int {
-	result := 1
-	for _, x := range s {
-		result = result*10 + int('0'-x)
-	}
-	return result
-}
-
 func isPrime(n int) bool {
 	// 0 1 are not primes
 	if n < 2 {
@@ -24,7 +16,7 @@ func isPrime(n int) bool {
 }
 
 func FindPrevPrime(nb int) int {
-	for i := nb; i >= 3; i++ {
+	for i := nb; i >= 3; i-- {
 		if isPrime(i) {
 			return i
 		}
