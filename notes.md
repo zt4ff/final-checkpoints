@@ -1,0 +1,4 @@
+- lastword
+- repeatalpha
+- Itoa
+- Atoi
