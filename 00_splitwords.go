@@ -22,3 +22,23 @@ func SplitWords(s string) []string {
 
 	return words
 }
+
+func Split(s, sep string) []string {
+	out := []string{}
+	curr := ""
+	n := len(sep)
+
+	for i := 0; i < len(s); {
+		if i+n <= len(s) && s[i:i+n] == sep {
+			out = append(out, curr)
+			curr = ""
+			i += n
+		} else {
+			curr += string(s[i])
+			i++
+		}
+	}
+	out = append(out, curr)
+
+	return out
+}

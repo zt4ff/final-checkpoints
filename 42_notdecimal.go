@@ -1,5 +1,12 @@
 package piscine
 
+func checkIfNumberOrDot(x rune) bool {
+	if (x >= '0' && x <= '9') || x == '.' {
+		return true
+	}
+	return false
+}
+
 func NotDecimal(dec string) string {
 	if len(dec) == 0 {
 		return "\n"
@@ -19,10 +26,15 @@ func NotDecimal(dec string) string {
 	ans := ""
 
 	for _, x := range dec {
-		if isNeg {
-			ans += string(x)
-		} else if x != '.' {
-			ans += string(x)
+		if checkIfNumberOrDot(x) {
+
+			if isNeg {
+				ans += string(x)
+			} else if x != '.' {
+				ans += string(x)
+			}
+		} else {
+			return dec
 		}
 	}
 

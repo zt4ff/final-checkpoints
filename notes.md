@@ -6,3 +6,9 @@
 - fprime
 - splitwords
 - wdmatch
+- revconcatalternate
+
+// to pratice of check again
+
+- isPrime
+- split words

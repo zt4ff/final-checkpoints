@@ -1,13 +1,34 @@
 package piscine
 
-// Write a function RevConcatAlternate() that receives two slices of int as arguments and returns a new slice with alternated values of each slice in reverse order.
+func RevConcatAlternate(slice1, slice2 []int) []int {
+	reverseA := []int{}
+	reverseB := []int{}
+	for i := len(slice1) - 1; i >= 0; i-- {
+		reverseA = append(reverseA, slice1[i])
+	}
+	for i := len(slice2) - 1; i >= 0; i-- {
+		reverseB = append(reverseB, slice2[i])
+	}
 
-// The input slices can have different lengths.
+	ans := []int{}
+	i, j := 0, 0
 
-// The new slice should start with the elements from the largest slice first and when they became equal size slices,
-// it should add an element of the first given slice.
+	if len(reverseA) > len(reverseB) {
+		for ; i < len(reverseA)-len(reverseB); i++ {
+			ans = append(ans, reverseA[i])
+		}
+	} else if len(reverseB) > len(reverseA) {
+		for ; j < len(reverseB)-len(reverseA); j++ {
+			ans = append(ans, reverseB[j])
+		}
+	}
 
-// If the slices are of equal length, the new slice should start
-// with an element of the first slice.
+	for i < len(reverseA) && j < len(reverseB) {
+		ans = append(ans, reverseA[i])
+		ans = append(ans, reverseB[j])
+		i++
+		j++
+	}
 
-// Note: you can check the examples bellow for more details.
+	return ans
+}
