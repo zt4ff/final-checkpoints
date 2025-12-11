@@ -1,9 +1,10 @@
 package piscine
 
 func FifthAndSkip(str string) string {
-	if len(str) == 0 || len(str) < 5 {
+	if len(str) < 5 {
 		return "\n"
 	}
+
 	ans := ""
 	count := 0
 	for _, x := range str {

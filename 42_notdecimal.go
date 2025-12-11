@@ -5,12 +5,12 @@ func NotDecimal(dec string) string {
 		return "\n"
 	}
 
-	// if the first two strings are 0. split them out
+	// if the first two strings are |0.| split them out
 	if dec[0:2] == "0." {
 		dec = dec[2:]
 	}
 
-	isNeg := false
+	var isNeg bool
 
 	if dec[0] == '-' {
 		isNeg = true
