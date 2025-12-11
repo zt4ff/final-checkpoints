@@ -1,4 +1,8 @@
 - lastword
 - repeatalpha
-- Itoa
-- Atoi
+- canjump
+- printrevcomb
+- printmemory
+- fprime
+- splitwords
+- wdmatch

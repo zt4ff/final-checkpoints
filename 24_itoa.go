@@ -1,10 +1,10 @@
 package piscine
 
 func Itoa(n int) string {
-	neg := false
+	isNeg := false
 
 	if n < 0 {
-		neg = true
+		isNeg = true
 		n *= -1
 	}
 
@@ -13,10 +13,10 @@ func Itoa(n int) string {
 	for n > 0 {
 		d := n % 10
 		result = string(d+'0') + result
-		n /= 10
+		n = n / 10
 	}
 
-	if neg {
+	if isNeg {
 		return "-" + result
 	}
 

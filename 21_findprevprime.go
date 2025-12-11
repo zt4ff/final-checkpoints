@@ -6,7 +6,7 @@ func isPrime(n int) bool {
 		return false
 	}
 
-	for a := 2; n >= a*a; a++ {
+	for a := 2; a*a <= n; a++ {
 		if n%a == 0 {
 			return false
 		}
@@ -16,7 +16,7 @@ func isPrime(n int) bool {
 }
 
 func FindPrevPrime(nb int) int {
-	for i := nb; i >= 3; i-- {
+	for i := nb; i >= 2; i-- {
 		if isPrime(i) {
 			return i
 		}
