@@ -1,9 +1,13 @@
 package main
 
 import (
-	"piscine"
+	"fmt"
 )
 
 func main() {
-	piscine.Revwstr()
+	// a := 3
+	// piscine.PointOne(&a)
+
+	fmt.Println(int('z'))
+	// fmt.Println(a)
 }

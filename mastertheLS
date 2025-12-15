@@ -1,0 +1,5 @@
+# List files/dirs by access time (newest first), comma-separated, dirs end with /
+# -t: sort by time, -u: access time, -p: append / to directories
+# tr: newlines to commas, sed: remove trailing comma
+
+ls -tup | tr '\n' ',' | sed 's/,$//'
